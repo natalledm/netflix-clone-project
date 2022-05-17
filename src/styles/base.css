@@ -1,5 +1,4 @@
-@import "../netflix-sans-fonts/font-face.css";
-@import "./layout/buttons.css";
+@import "../assets/netflix-sans-fonts/font-face.css";
 
 :root {
   --netflix-red: #e50914;
@@ -23,7 +22,7 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  background-color: var(--dark-gray);
+  background-color: var(--black);
   color: var(--white);
 }
 

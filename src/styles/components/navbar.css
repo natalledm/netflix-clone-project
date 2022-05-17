@@ -1,0 +1,85 @@
+.navigation-bar {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  padding: 0 6rem;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--n-regular-font);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(0, 0, 0, 0)
+  );
+  -webkit-transition: all ease-out 0.5s;
+  -moz-transition: all ease-out 0.5s;
+  -o-transition: all ease-out 0.5s;
+  transition: all ease-out 0.5s;
+}
+
+.logo-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.netflix-logo {
+  width: 92px;
+  height: 30px;
+  margin-right: 25px;
+}
+
+.list-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.list-navigation li {
+  line-height: 1.4rem;
+}
+
+.navigation-focus {
+  font-weight: bold;
+}
+
+/* Secondary navigation */
+
+.secondary-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary-navigation li {
+  margin-right: 20px;
+}
+
+.secondary-icons {
+  width: 20px;
+  height: 20px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+}
+
+.user-arrow-options {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* transitions and animations */
+
+.user-arrow-options:hover {
+  transform: rotate(180deg);
+}
+
+.scrolled {
+  background-color: var(--black) !important;
+}
