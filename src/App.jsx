@@ -1,3 +1,11 @@
+import Navbar from "./components/Navbar";
+import UserDashboard from "./pages/UserDashboard";
+
 export default function App() {
-  return <h1>Hello world</h1>;
+  return (
+    <div>
+      <Navbar />
+      <UserDashboard />;
+    </div>
+  );
 }
