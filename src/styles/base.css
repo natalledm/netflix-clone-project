@@ -1,0 +1,86 @@
+@import "../netflix-sans-fonts/font-face.css";
+@import "./layout/buttons.css";
+
+:root {
+  --netflix-red: #e50914;
+  --netflix-shadow-red: #b00710;
+  --black: #141414;
+  --white: #ffffff;
+  --dark-gray: #303030;
+  --blue-accent: #54b9c5;
+  --n-regular-font: "netflix_sansregular", sans-serif;
+  --n-bold-font: "netflix_sansbold", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+body {
+  font-size: 1.4rem;
+  box-sizing: border-box;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  object-fit: cover;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.1rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--n-bold-font);
+}
+
+p,
+a,
+label {
+  font-size: 1.4rem;
+  font-family: var(--n-regular-font);
+}
+
+/* Tags styles */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}

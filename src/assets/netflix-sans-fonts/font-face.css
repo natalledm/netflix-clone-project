@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "netflix_sansbold";
+  src: url("netflixsansbold.woff2") format("woff2"),
+    url("netflixsansbold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "netflix_sansregular";
+  src: url("netflixsansregular.woff2") format("woff2"),
+    url("netflixsansregular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
