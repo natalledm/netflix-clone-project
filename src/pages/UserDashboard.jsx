@@ -13,6 +13,10 @@ export default function UserDashboard() {
         <h2>Future component row</h2>
         <TitleCard />
       </div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
+      voluptate. Vel, nihil incidunt sequi cupiditate, dolore placeat quo quam
+      quidem iusto ex perferendis ab facere aspernatur eligendi eaque eum
+      provident.
     </div>
   );
 }
