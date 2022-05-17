@@ -11,7 +11,6 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const changeBackgroundColor = () => {
-    console.log(window.scrollY);
     if (window.scrollY >= 80) {
       setIsScrolled(true);
     } else {
