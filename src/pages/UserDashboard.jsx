@@ -1,17 +1,14 @@
-import backgroundImg from "../assets/images/season2-russian-doll.jpg";
-import PlayButton from "../components/PlayButton";
+import Header from "../components/Header";
+import "../styles/pages/user-dashboard.css";
 
 export default function UserDashboard() {
   function shoutout() {
     console.log("Clicked play!");
   }
-
   return (
-    <header>
-      <div>
-        <img src={backgroundImg} alt="season 1 russian doll series" />
-        <PlayButton loadItem={shoutout} />
-      </div>
-    </header>
+    <div>
+      <Header loadItem={shoutout} />
+      <h1>Hello</h1>
+    </div>
   );
 }

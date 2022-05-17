@@ -1,0 +1,21 @@
+/* play button */
+.play-button-long {
+  background-color: var(--white);
+  border: none;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  font-family: var(--n-bold-font);
+  font-size: 1.6rem;
+}
+
+.play-button-long:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-decoration: underline;
+}
