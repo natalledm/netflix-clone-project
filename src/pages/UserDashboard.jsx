@@ -1,4 +1,5 @@
 import Header from "../components/Header";
+import TitleCard from "../components/TitleCard";
 import "../styles/pages/user-dashboard.css";
 
 export default function UserDashboard() {
@@ -8,7 +9,14 @@ export default function UserDashboard() {
   return (
     <div>
       <Header loadItem={shoutout} />
-      <h1>Hello</h1>
+      <div className="row">
+        <h2>Future component row</h2>
+        <TitleCard />
+      </div>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora,
+      voluptate. Vel, nihil incidunt sequi cupiditate, dolore placeat quo quam
+      quidem iusto ex perferendis ab facere aspernatur eligendi eaque eum
+      provident.
     </div>
   );
 }

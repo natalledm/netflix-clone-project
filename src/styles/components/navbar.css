@@ -1,6 +1,6 @@
 .navigation-bar {
   position: fixed;
-  z-index: 2;
+  z-index: 20;
   width: 100%;
   padding: 0 6rem;
   height: 70px;
