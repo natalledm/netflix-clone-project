@@ -1,0 +1,36 @@
+.footer-container {
+  max-width: 980px;
+  margin: 20px auto 0;
+  padding: 0 4%;
+  color: grey;
+  display: flex;
+  flex-direction: column;
+}
+
+.social-media-container {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.social-media-container img {
+  margin-right: 15px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 14px 0;
+  padding: 0;
+  font-size: 13px;
+  width: inherit;
+}
+
+.footer-links li {
+  margin-bottom: 16px;
+}
+
+.copyright a {
+  font-size: small;
+}

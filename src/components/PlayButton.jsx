@@ -1,5 +1,5 @@
 import playIcon from "../assets/icons/play-icon.png";
-import "../styles/layout/play-buttons.css";
+import "../styles/components/play-buttons.css";
 
 export default function PlayButton({ loadItem }) {
   return (
