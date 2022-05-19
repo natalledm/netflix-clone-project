@@ -1,5 +1,6 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Navbar from "../components/Navbar";
 import TitleCard from "../components/TitleCard";
 import "../styles/pages/user-dashboard.css";
 
@@ -9,6 +10,7 @@ export default function UserDashboard() {
   }
   return (
     <div>
+      <Navbar />
       <Header loadItem={shoutout} />
       <div className="row">
         <h2>Future component row</h2>
