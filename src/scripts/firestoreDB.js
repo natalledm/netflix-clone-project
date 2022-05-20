@@ -2,7 +2,6 @@
 import { firestoreDB } from "./connectToFirebase";
 
 // packages
-// packages
 import {
   collection,
   doc,
@@ -15,6 +14,7 @@ import {
 } from "firebase/firestore";
 
 // Get
+
 // all documents
 export async function getCollection(path) {
   const collectionPath = collection(firestoreDB, path);
@@ -26,7 +26,7 @@ export async function getCollection(path) {
   return documents;
 }
 
-// single document (ex: fantasy)
+// single document (ex: film)
 export async function getDocument(path, id) {
   const documentPath = doc(firestoreDB, path, id);
   const document = await getDoc(documentPath);
@@ -34,7 +34,8 @@ export async function getDocument(path, id) {
   return document.data();
 }
 
-// Add
+// Create
+
 // Create document with its id
 export async function addDocumentWithId(path, data, customId) {
   const docLocation = collection(firestoreDB, path);
@@ -50,7 +51,8 @@ export async function addDocument(path, data) {
   return newDocument.id;
 }
 
-// Edit
+// Update
+
 // edit document with its id
 export async function editDocument(path, data, docId) {
   const document = doc(firestoreDB, path, docId);
