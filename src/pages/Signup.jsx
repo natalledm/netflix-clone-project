@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; //add useNavigate
+import { Link, useNavigate } from "react-router-dom"; //add useNavigate
 
 import { addDocumentWithId } from "../scripts/fireStoreDB";
 import { createUser } from "../scripts/firebaseAuthentication";
@@ -13,7 +13,7 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // const navigation = useNavigate();
+  const navigation = useNavigate();
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -29,7 +29,7 @@ export default function Signup() {
 
   function onSuccess() {
     alert(`Account created! You can login now.`);
-    // navigation("/login");
+    navigation("/login");
   }
 
   function onFail(error) {
