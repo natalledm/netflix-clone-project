@@ -1,18 +1,44 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useUserId } from "../state/UserIdContext";
+import { loginUser } from "../scripts/firebaseAuthentication";
 
 import "../styles/pages/login.css";
 import loginBg from "../assets/images/login-netflix.png";
 import logo from "../assets/logo.svg";
 
 export default function SignIn() {
+  // global state
+  const { login } = useUserId();
+
+  // local state
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigation = useNavigate();
 
-  function onSubmit(event) {
+  async function onSubmit(event) {
     event.preventDefault();
 
-    console.log("signed in");
+    const uid = await loginUser(email, password).catch(onFail);
+
+    if (uid) onSuccess(uid);
+
+    resetForm();
+  }
+
+  function onFail(error) {
+    console.error(error);
+    alert(`Error: Wrong password or email! Error message: ${error}`);
+  }
+
+  function onSuccess(uid) {
+    login(uid);
+    navigation("/dashboard");
+  }
+
+  function resetForm() {
+    setEmail("");
+    setPassword("");
   }
 
   return (
