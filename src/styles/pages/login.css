@@ -1,0 +1,131 @@
+/* whole page */
+
+.login-page {
+  min-height: 100%;
+  min-width: 100%;
+  position: relative;
+  z-index: 0;
+  background-color: var(--black);
+  color: var(--soft-gray);
+}
+
+.image-bg-container {
+  background-size: cover;
+  display: block;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+#netflix-logo-login {
+  width: 167px;
+  height: 45px;
+  margin-left: 3%;
+  margin-top: 3%;
+}
+
+/* login content */
+
+.login-content {
+  margin: 0 auto -236px;
+  min-height: 600px;
+  background-color: transparent;
+  max-width: 450px;
+  display: flex;
+  justify-content: center;
+}
+
+.login-container {
+  width: 100%;
+  min-height: 600px;
+  margin: 0 auto;
+  padding: 60px 68px 40px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 12px;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.login-title {
+  color: var(--white);
+  text-align: left;
+  margin-bottom: 2.5rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-family: var(--text-font);
+  width: inherit;
+}
+
+.login-form input {
+  background: #333;
+  border-radius: 4px;
+  border: 0;
+  color: #fff;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 16px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-paragraph {
+  padding: 2rem;
+}
+
+.link-login {
+  text-decoration: underline;
+  font-weight: bold;
+  margin-left: 0.6rem;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: var(--netflix-red);
+  border: none;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 1rem;
+  padding-left: 2rem;
+  padding-right: 2.4rem;
+  font-family: var(--n-bold-font);
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.login-button:hover {
+  background-color: var(--netflix-shadow-red);
+  text-decoration: underline;
+}
+
+.recover-help,
+.recover-help a {
+  color: #b3b3b3;
+  text-align: end;
+  font-size: 13px;
+}
+
+.signup-paragraph {
+  margin-top: 5rem;
+  color: #737373;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.signup-paragraph a {
+  font-size: 16px;
+  color: var(--white);
+}

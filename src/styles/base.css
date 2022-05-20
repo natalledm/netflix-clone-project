@@ -6,7 +6,9 @@
   --black: #141414;
   --white: #ffffff;
   --dark-gray: #303030;
+  --soft-gray: #737373;
   --blue-accent: #54b9c5;
+  --orange-error: #e87c03;
   --n-regular-font: "netflix_sansregular", sans-serif;
   --n-bold-font: "netflix_sansbold", sans-serif;
 }
@@ -85,9 +87,9 @@ li {
 }
 
 .main-button {
-  background-color: var(--white);
+  background-color: var(--netflix-red);
   border: none;
-  color: var(--black);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -101,6 +103,6 @@ li {
 }
 
 .main-button:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--netflix-shadow-red);
   text-decoration: underline;
 }
