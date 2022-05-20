@@ -1,0 +1,17 @@
+{
+  "fullName": {
+    "label": "Name",
+    "placeholder": "Ex: Mary Smith",
+    "type": "text"
+  },
+  "email": {
+    "label": "Email",
+    "placeholder": "Ex: abba@stckhlm.com",
+    "type": "email"
+  },
+  "password": {
+    "label": "Password",
+    "placeholder": "********",
+    "type": "password"
+  }
+}

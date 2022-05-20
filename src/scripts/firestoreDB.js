@@ -2,14 +2,19 @@
 import { firestoreDB } from "./connectToFirebase";
 
 // packages
+// packages
 import {
   collection,
   doc,
   getDoc,
-  getDocs
+  getDocs,
+  addDoc,
+  deleteDoc,
+  setDoc,
+  updateDoc,
 } from "firebase/firestore";
 
-// Read
+// Get
 // all documents
 export async function getCollection(path) {
   const collectionPath = collection(firestoreDB, path);
@@ -22,9 +27,39 @@ export async function getCollection(path) {
 }
 
 // single document (ex: fantasy)
-export async function readDocument(path, id) {
+export async function getDocument(path, id) {
   const documentPath = doc(firestoreDB, path, id);
   const document = await getDoc(documentPath);
 
   return document.data();
+}
+
+// Add
+// Create document with its id
+export async function addDocumentWithId(path, data, customId) {
+  const docLocation = collection(firestoreDB, path);
+  await setDoc(doc(docLocation, customId), data);
+  return true;
+}
+
+// Create document with firestore generated id
+export async function addDocument(path, data) {
+  const docPath = collection(firestoreDB, path);
+  const newDocument = await addDoc(docPath, data);
+
+  return newDocument.id;
+}
+
+// Edit
+// edit document with its id
+export async function editDocument(path, data, docId) {
+  const document = doc(firestoreDB, path, docId);
+  await updateDoc(document, data);
+  return true;
+}
+
+// Delete document
+export async function deleteDocument(path, docId) {
+  const document = doc(firestoreDB, path, docId);
+  await deleteDoc(document);
 }
