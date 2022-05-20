@@ -9,7 +9,7 @@ import logo from "../assets/logo.svg";
 
 export default function SignIn() {
   // global state
-  // const { login } = useUserId();
+  const { login } = useUserId();
 
   // local state
   const [email, setEmail] = useState("");
