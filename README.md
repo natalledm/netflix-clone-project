@@ -4,7 +4,7 @@ This is Nättflix website, where you can sign up to watch series and movies to <
 
 The **data is created dynamically** through an admin page connected to the firestore database. If you want to test it, ask me for a teachers account!
 
-It is a mobile first page, so please check it out first with your mobile or a mobile screen option in your browser.
+It is a desktop first page following the netflix web format, so please open it on a desktop browser.
 
 You can visit the page [here](https://google.com/tbd) to see the working site. I did more steps of organization, including a Figma design, but I will write a shorter Readme. If you are curious to see or want to talk about it, let me know! :)
 
