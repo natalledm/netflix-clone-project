@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AdminDashboard from "./pages/AdminDashboard";
 import SignIn from "./pages/SignIn";
 import Signup from "./pages/Signup";
 import UserDashboard from "./pages/UserDashboard";
@@ -13,6 +14,7 @@ export default function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<SignIn />} />
           <Route path="/" element={<SignIn />} />
+          <Route path="/admin" element={<AdminDashboard />} />
         </Routes>
       </BrowserRouter>
     </div>
