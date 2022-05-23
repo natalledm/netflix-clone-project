@@ -33,7 +33,7 @@ export default function SignIn() {
 
   function onSuccess(uid) {
     login(uid);
-    navigation("/dashboard");
+    navigation("/browse");
   }
 
   function resetForm() {
