@@ -16,6 +16,7 @@ export function UserIdContext({ children }) {
   const [userId, setUserId] = useState(null);
   const [userInfo, setUserInfo] = useState([]);
 
+  // first load = check local storage
   useEffect(() => {
     async function onFirstLoad() {
       const info = getLocalStorageUser();
