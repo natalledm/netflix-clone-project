@@ -7,7 +7,7 @@ import "../styles/pages/login.css";
 import loginBg from "../assets/images/login-netflix.png";
 import logo from "../assets/logo.svg";
 
-export default function SignIn() {
+export default function Login() {
   // global state
   const { login } = useUserId();
 

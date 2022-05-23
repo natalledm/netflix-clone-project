@@ -2,7 +2,6 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
 import TitleCard from "../components/TitleCard";
-import YoutubeVideo from "../components/YoutubeVideo";
 import "../styles/pages/user-dashboard.css";
 
 export default function UserDashboard() {
@@ -21,9 +20,6 @@ export default function UserDashboard() {
       voluptate. Vel, nihil incidunt sequi cupiditate, dolore placeat quo quam
       quidem iusto ex perferendis ab facere aspernatur eligendi eaque eum
       provident.
-      <div>
-        <YoutubeVideo embedId="rokGy0huYEA" />
-      </div>
       <Footer />
     </div>
   );
