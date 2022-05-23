@@ -76,10 +76,56 @@
 
 /* transitions and animations */
 
-.user-arrow-options:hover {
+.active .user-arrow-options {
   transform: rotate(180deg);
 }
 
 .scrolled {
   background-color: var(--black) !important;
+}
+
+/* User menu */
+
+.user-menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-content {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: -100px;
+  background-color: #010101;
+  width: 180px;
+  min-height: 50px;
+  border: 0.5px solid var(--dark-gray);
+  padding: 10px;
+  z-index: 30;
+}
+
+.menu-arrow {
+  position: relative;
+  top: -32px;
+  left: 89px;
+  transform: rotate(180deg);
+}
+
+.logout-btn {
+  color: var(--white);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  line-height: 16px;
+}
+
+.logout-btn:hover {
+  text-decoration: underline;
+}
+
+.active .menu-content {
+  display: inline-block;
+  transition: 150ms;
 }
