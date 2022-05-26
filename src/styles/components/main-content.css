@@ -1,0 +1,18 @@
+.main-container {
+  position: relative;
+}
+
+.my-list-container {
+  position: absolute;
+  padding: 0 6%;
+  z-index: 10;
+  top: -35%;
+  left: 0%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  padding: 0 6%;
+}

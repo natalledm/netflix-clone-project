@@ -1,0 +1,18 @@
+.row-container {
+  background-color: transparent;
+}
+
+.row-category-tile {
+  font-size: 1.4vw;
+  color: #e5e5e5;
+  font-weight: 700;
+  margin: 0 4% 0.5em 4%;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 6em;
+}
+
+.title-card-container {
+  display: flex;
+  gap: 0.5rem;
+}

@@ -60,10 +60,10 @@ export default function Navbar() {
             onMouseEnter={toggleHover}
             onMouseLeave={toggleHover}
           >
-            <div class="user-options user-menu">
+            <div className="user-options user-menu">
               <img src={userImg} alt="" className="user-avatar" />
               <img src={userArrow} alt="" className="user-arrow-options" />
-              <div class="menu-content">
+              <div className="menu-content">
                 <img src={userArrow} alt="" className="menu-arrow" />
                 <button className="logout-btn" onClick={logout}>
                   Sign out of Netflix
