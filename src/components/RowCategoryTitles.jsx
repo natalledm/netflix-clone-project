@@ -8,7 +8,7 @@ export default function RowCategoryTitles({ category, titles }) {
       <div className="title-card-container">
         {titles.map((title) => {
           return (
-            <span>
+            <span key={title.id}>
               <TitleCard title={title} />
             </span>
           );
