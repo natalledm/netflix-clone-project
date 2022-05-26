@@ -1,9 +1,7 @@
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-import TitleCard from "../components/TitleCard";
-import TitlesContainer from "../components/TitlesContainer";
-import "../styles/pages/user-dashboard.css";
+import MainContent from "../components/MainContent";
 
 export default function UserDashboard() {
   function shoutout() {
@@ -13,11 +11,7 @@ export default function UserDashboard() {
     <div>
       <Navbar />
       <Header loadItem={shoutout} />
-      <div className="row">
-        <h2>Future component row</h2>
-        <TitleCard />
-      </div>
-      <TitlesContainer />
+      <MainContent />
       <Footer />
     </div>
   );

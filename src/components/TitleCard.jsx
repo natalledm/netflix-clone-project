@@ -11,13 +11,18 @@ import TitleCardModal from "./TitleCardModal";
 
 export default function TitleCard({ title }) {
   const [showModal, setShowModal] = useState(false);
+  const [titleId, setTitleId] = useState("");
 
   if (title === undefined) {
     return null;
   }
 
-  const { thumbnail, keywords } = title;
+  const { thumbnail, keywords, id } = title;
   const toggleModal = () => setShowModal(!showModal);
+  function titleToList() {
+    setTitleId(id);
+    console.log(titleId);
+  }
 
   return (
     <div className="title-card">
@@ -28,7 +33,7 @@ export default function TitleCard({ title }) {
             <button className="button-circle" id="play-filled">
               <img src={playIcon} alt="play title" className="icon-size" />
             </button>
-            <button className="button-circle">
+            <button className="button-circle" onClick={titleToList}>
               <img src={plusIcon} alt="add to my list" className="icon-size" />
             </button>
             <button className="button-circle">
@@ -45,8 +50,14 @@ export default function TitleCard({ title }) {
             </button>
           </span>
         </div>
-        {keywords !== undefined &&
-          keywords.map((keyword) => <span key={keyword}>• {keyword}</span>)}
+        <ul className="genre-keywords">
+          {keywords !== undefined &&
+            keywords.map((keyword) => (
+              <li key={keyword} className="keyword">
+                {keyword}
+              </li>
+            ))}
+        </ul>
       </div>
       <Modal>{showModal && <TitleCardModal toggleModal={toggleModal} />}</Modal>
     </div>

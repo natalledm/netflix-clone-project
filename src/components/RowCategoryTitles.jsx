@@ -1,16 +1,19 @@
 import TitleCard from "./TitleCard";
+import "../styles/components/row-category-titles.css";
 
 export default function RowCategoryTitles({ category, titles }) {
   return (
-    <section>
-      <h2>{category}</h2>
-      {titles.map((title) => {
-        return (
-          <span>
-            <TitleCard title={title} />
-          </span>
-        );
-      })}
-    </section>
+    <div className="row-container">
+      <h2 className="row-category-title">{category}</h2>
+      <div className="title-card-container">
+        {titles.map((title) => {
+          return (
+            <span>
+              <TitleCard title={title} />
+            </span>
+          );
+        })}
+      </div>
+    </div>
   );
 }
