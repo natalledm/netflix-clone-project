@@ -1,11 +1,23 @@
+import ModalHeader from "./ModalHeader";
+import ModalInfoSection from "./ModalInfoSection";
 import "../styles/components/title-card-modal.css";
+import "../styles/components/modal-info-section.css";
 
-export default function TitleCardModal({ toggleModal }) {
+export default function TitleCardModal({ toggleModal, title, titleToList }) {
   return (
     <div>
       <div className="background-layover" onClick={toggleModal}></div>
       <div className="modal-layer">
-        <h1>HELLO</h1>
+        <div className="modal-content">
+          <ModalHeader
+            title={title}
+            toggleModal={toggleModal}
+            titleToList={titleToList}
+          />
+          <div className="modal-content-info">
+            <ModalInfoSection title={title} />
+          </div>
+        </div>
       </div>
     </div>
   );

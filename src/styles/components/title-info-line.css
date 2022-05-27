@@ -1,0 +1,23 @@
+.content-time-seasons {
+  width: 210px;
+  font-family: var(--n-bold-font);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.match-percent {
+  color: #46d369;
+}
+
+.age {
+  border: solid 1px rgba(255, 255, 255, 0.4);
+  padding: 0 0.4em;
+}
+
+.hd {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0 0.5em;
+  font-size: 0.7em;
+  border-radius: 3px;
+}
