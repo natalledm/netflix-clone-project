@@ -1,5 +1,5 @@
 .content-time-seasons {
-  width: 210px;
+  width: inherit;
   font-family: var(--n-bold-font);
   display: flex;
   align-items: center;
