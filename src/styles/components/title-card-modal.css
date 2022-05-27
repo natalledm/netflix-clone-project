@@ -13,7 +13,8 @@
 .modal-layer {
   position: fixed;
   z-index: 50;
-  width: 90%;
+  width: 850px;
+  min-width: 850px;
   max-width: 1200px;
   max-height: 97%;
   top: 4%;
@@ -24,4 +25,12 @@
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-color: var(--black);
+}
+
+.modal-content {
+  width: 100%;
+}
+
+.modal-content-info {
+  padding: 0 3rem;
 }

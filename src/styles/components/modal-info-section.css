@@ -1,0 +1,32 @@
+.content-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  column-gap: 2em;
+  font-size: 16px;
+}
+
+.content-time-series-description {
+  flex-grow: 2;
+}
+
+.content-extra-info {
+  flex-grow: 1;
+}
+
+/* time and seasons line */
+
+.content-time-seasons {
+  width: 100%;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 0.8em 0;
+}
+
+.match-percent {
+  font-family: var(--n-bold-font);
+  color: #46d369;
+}

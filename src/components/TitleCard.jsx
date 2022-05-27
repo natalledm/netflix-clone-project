@@ -59,7 +59,15 @@ export default function TitleCard({ title }) {
             ))}
         </ul>
       </div>
-      <Modal>{showModal && <TitleCardModal toggleModal={toggleModal} />}</Modal>
+      <Modal>
+        {showModal && (
+          <TitleCardModal
+            toggleModal={toggleModal}
+            title={title}
+            titleToList={titleToList}
+          />
+        )}
+      </Modal>
     </div>
   );
 }
