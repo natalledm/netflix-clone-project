@@ -7,11 +7,10 @@ export default function ModalInfoSection({ title }) {
 
   // infos
   const genres = title.keywords.map((keyword) => (
-    <span key={keyword}>{keyword}, </span>
+    <span key={keyword}>{keyword}</span>
   ));
   const seasons = title.seasons;
   const productionYear = title.releaseYear;
-  const age = title.age;
 
   // duration (film or doc)
   let hours = Math.floor(title.duration / 60);
@@ -24,27 +23,31 @@ export default function ModalInfoSection({ title }) {
     <div className="content-container">
       <div className="content-time-series-description">
         <div className="content-time-seasons">
-          {isFilmOrDoc && (
-            <span className="match-percent">{randomPercentage}% Match</span>
-          )}
+          <span className="match-percent">{randomPercentage}% Match</span>
           <span>{productionYear}</span>
-          <span>{age}+</span>
+          <span className="age">16+</span>
           {isFilmOrDoc && (
             <span>
               {hours}h {minutes}m
             </span>
           )}
           {isSerie && <span>{`${seasons} Seasons`}</span>}
-          <span>HD</span>
+          <span className="hd">HD</span>
         </div>
-        <div>
+        <div className="title-description">
           <p>{title.description}</p>
         </div>
       </div>
       <div className="content-extra-info">
-        <section>Genres: {genres}</section>
         <section>
-          This {title.type} is: {genres}
+          <strong className="content-extra-info-label">Genres:</strong>
+          {genres}
+        </section>
+        <section>
+          <strong className="content-extra-info-label">
+            This {title.type} is:
+          </strong>
+          {genres}
         </section>
       </div>
     </div>
