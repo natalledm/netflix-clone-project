@@ -5,7 +5,7 @@ import { addDocumentWithId } from "../scripts/fireStoreDB";
 import { createUser } from "../scripts/firebaseAuthentication";
 import formInfo from "../data/signup-form.json";
 import InputField from "../components/InputField";
-
+import logo from "../assets/logo.svg";
 import "../styles/pages/signup.css";
 
 export default function Signup() {
@@ -38,26 +38,32 @@ export default function Signup() {
   }
 
   return (
-    <div className="signup-container">
-      <h1 className="signup-title">Create an Account</h1>
-      <form onSubmit={onSubmit} className="signup-form">
-        <InputField
-          state={[fullName, setFullName]}
-          fieldInfo={formInfo.fullName}
-        />
-        <InputField state={[email, setEmail]} fieldInfo={formInfo.email} />
-        <InputField
-          state={[password, setPassword]}
-          fieldInfo={formInfo.password}
-        />
-        <button className="main-button">Create account</button>
-      </form>
-      <p className="login-paragraph">
-        Already have an account?{" "}
+    <div className="signup-page">
+      <div className="signup-header">
+        <img src={logo} alt="" id="netflix-logo-signup" />
         <Link to={"/login"} className="link-login">
-          Log in
+          Sign In
         </Link>
-      </p>
+      </div>
+      <div className="signup-container">
+        <h1 className="signup-title">Welcome back! Joining Netflix is easy.</h1>
+        <p>
+          Enter your name, email and password, and you'll be watching in no
+          time.
+        </p>
+        <form onSubmit={onSubmit} className="signup-form">
+          <InputField
+            state={[fullName, setFullName]}
+            fieldInfo={formInfo.fullName}
+          />
+          <InputField state={[email, setEmail]} fieldInfo={formInfo.email} />
+          <InputField
+            state={[password, setPassword]}
+            fieldInfo={formInfo.password}
+          />
+          <button className="main-button signup-button">Create account</button>
+        </form>
+      </div>
     </div>
   );
 }
