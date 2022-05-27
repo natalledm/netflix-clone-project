@@ -1,16 +1,47 @@
-.signup-container {
-  max-width: 600px;
-  margin: 10% auto;
+.signup-page {
+  background-color: var(--white);
+  height: 100vh;
+  color: var(--black);
+}
+
+/* header */
+
+.signup-header {
+  height: 90px;
+  border-bottom: 1px solid #e6e6e6;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 3rem;
-  border: 1px solid var(--white);
-  border-radius: 12px;
+}
+
+#netflix-logo-signup {
+  margin-left: 3%;
+  width: 167px;
+  height: 45px;
+}
+
+.link-login {
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  margin-right: 3%;
+}
+
+.link-login:hover {
+  text-decoration: underline;
+}
+
+/* Form */
+
+.signup-container {
+  text-align: left;
+  max-width: 440px;
+  margin: 5% auto;
 }
 
 .signup-title {
-  margin: 3rem;
+  font-size: 3.2rem;
 }
 
 .signup-form {
@@ -24,21 +55,21 @@
 
 .signup-form label {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .signup-form input {
-  margin-left: 1rem;
+  padding-left: 1rem;
+  font-size: 2rem;
 }
 
 .login-paragraph {
   padding: 2rem;
 }
 
-.link-login {
-  text-decoration: underline;
-  font-weight: bold;
-  margin-left: 0.6rem;
-  cursor: pointer;
+.signup-button {
+  width: 100%;
+  line-height: 4rem;
 }
