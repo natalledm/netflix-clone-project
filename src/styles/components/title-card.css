@@ -27,7 +27,7 @@
 
 .title-card-info-line-container {
   font-size: 12px;
-  width: 230px;
+  width: 210px;
 }
 
 .genre-keywords {
@@ -60,10 +60,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-#play-filled {
-  background-color: var(--white);
 }
 
 .button-circle {

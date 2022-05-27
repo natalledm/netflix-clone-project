@@ -4,13 +4,10 @@ import Navbar from "../components/Navbar";
 import MainContent from "../components/MainContent";
 
 export default function UserDashboard() {
-  function shoutout() {
-    console.log("Clicked play!");
-  }
   return (
     <div>
       <Navbar />
-      <Header loadItem={shoutout} />
+      <Header />
       <MainContent />
       <Footer />
     </div>

@@ -4,7 +4,7 @@ import iconN from "../assets/icons-netflix/n-24.png";
 import "../styles/components/header.css";
 import PlayButton from "./PlayButton";
 
-export default function Header({ loadItem }) {
+export default function Header() {
   return (
     <header className="header-container">
       <img
@@ -27,7 +27,7 @@ export default function Header({ loadItem }) {
           </p>
         </div>
         <div className="hero-links-buttons">
-          <PlayButton loadItem={loadItem} />
+          <PlayButton videoId={"dQw4w9WgXcQ"} />
           <button className="more-info-button">
             <img src={infoIcon} alt="" /> More Info
           </button>

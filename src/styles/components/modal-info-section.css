@@ -7,6 +7,12 @@
   font-size: 16px;
 }
 
+.info-line-modal .content-time-seasons {
+  margin: 2rem 0;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
 /* extra info */
 .content-extra-info {
   display: flex;

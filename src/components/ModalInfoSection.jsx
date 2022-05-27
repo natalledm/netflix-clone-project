@@ -10,8 +10,12 @@ export default function ModalInfoSection({ title }) {
   return (
     <div className="content-container">
       <div>
-        <TitleInfoLine title={title} />
+        <span className="info-line-modal">
+          <TitleInfoLine title={title} />
+        </span>
+        <p>{title.description}</p>
       </div>
+
       <div className="content-extra-info">
         <section>
           <strong className="content-extra-info-label">Genres:</strong>

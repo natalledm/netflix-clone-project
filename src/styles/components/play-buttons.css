@@ -13,9 +13,30 @@
   padding-right: 2.4rem;
   font-family: var(--n-bold-font);
   font-size: 1.6rem;
+  cursor: pointer;
 }
 
 .play-button-long:hover {
   background-color: rgba(255, 255, 255, 0.8);
   text-decoration: underline;
+}
+
+.play-button-circle {
+  border-radius: 50%;
+  opacity: 1;
+  border: 2px solid var(--white);
+  background-color: var(--white);
+  padding: 0.5rem;
+  margin: 0.2rem;
+  text-align: center;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.icon-play {
+  width: 12px;
+  height: 12px;
+  text-align: center;
 }
