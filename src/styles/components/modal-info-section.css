@@ -7,35 +7,6 @@
   font-size: 16px;
 }
 
-/* time and seasons line */
-
-.content-time-seasons {
-  width: 100%;
-  font-family: var(--n-bold-font);
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  margin: 0.8em 0;
-}
-
-.match-percent {
-  color: #46d369;
-}
-
-.age {
-  border: solid 1px rgba(255, 255, 255, 0.4);
-  padding: 0 0.4em;
-}
-
-.hd {
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  padding: 0 0.5em;
-  font-size: 0.7em;
-  border-radius: 3px;
-}
-
 /* extra info */
 .content-extra-info {
   display: flex;

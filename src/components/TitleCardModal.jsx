@@ -1,6 +1,7 @@
-import "../styles/components/title-card-modal.css";
 import ModalHeader from "./ModalHeader";
 import ModalInfoSection from "./ModalInfoSection";
+import "../styles/components/title-card-modal.css";
+import "../styles/components/modal-info-section.css";
 
 export default function TitleCardModal({ toggleModal, title, titleToList }) {
   return (

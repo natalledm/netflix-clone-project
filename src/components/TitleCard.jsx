@@ -8,6 +8,7 @@ import like from "../assets/icons/like.png";
 import "../styles/components/title-card.css";
 import { useState } from "react";
 import TitleCardModal from "./TitleCardModal";
+import TitleInfoLine from "./TitleInfoLine";
 
 export default function TitleCard({ title }) {
   const [showModal, setShowModal] = useState(false);
@@ -50,14 +51,17 @@ export default function TitleCard({ title }) {
             </button>
           </span>
         </div>
-        <ul className="genre-keywords">
-          {keywords !== undefined &&
-            keywords.map((keyword) => (
-              <li key={keyword} className="keyword">
-                {keyword}
-              </li>
-            ))}
-        </ul>
+        <div className="title-card-info-line-container">
+          <TitleInfoLine title={title} />
+          <ul className="genre-keywords">
+            {keywords !== undefined &&
+              keywords.map((keyword) => (
+                <li key={keyword} className="keyword">
+                  {keyword}
+                </li>
+              ))}
+          </ul>
+        </div>
       </div>
       <Modal>
         {showModal && (
