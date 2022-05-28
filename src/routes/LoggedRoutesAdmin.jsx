@@ -6,6 +6,7 @@ export default function LoggedRoutesAdmin() {
   return (
     <Routes>
       <Route path="/admin" element={<AdminDashboard />} />
+      <Route path="*" element={<AdminDashboard />} />
       <Route path="/browse" element={<UserDashboard />} />
     </Routes>
   );

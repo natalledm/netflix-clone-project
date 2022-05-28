@@ -1,12 +1,47 @@
 {
-  "name": "",
-  "thumbnail": "",
-  "backgroundImage": "",
-  "description": "",
-  "type": "",
-  "slug": "",
-  "keywords": "",
-  "cast": "",
-  "videoId": "",
-  "seasons": 1
+  "name": {
+    "label": "Name",
+    "placeholder": "Ex: Abracadabra",
+    "type": "text"
+  },
+  "description": {
+    "label": "Description",
+    "placeholder": "Description here",
+    "type": "textarea"
+  },
+  "keywords": {
+    "label": "Keywords",
+    "placeholder": "Separate words by space",
+    "type": "text"
+  },
+  "videoId": {
+    "label": "video Id",
+    "placeholder": "Write the id for the video on Youtube",
+    "type": "text"
+  },
+  "thumbnail": {
+    "label": "Thumbnail",
+    "placeholder": "https://example.com/.jpg",
+    "type": "text"
+  },
+  "backgroundImage": {
+    "label": "Background Image",
+    "placeholder": "https://example.com/.jpg",
+    "type": "text"
+  },
+  "duration": {
+    "label": "duration",
+    "placeholder": "",
+    "type": "number"
+  },
+  "releaseYear": {
+    "label": "Release Year",
+    "placeholder": "",
+    "type": "number"
+  },
+  "seasons": {
+    "label": "Number of seasons",
+    "placeholder": "",
+    "type": "number"
+  }
 }
