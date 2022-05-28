@@ -11,6 +11,8 @@ import {
   deleteDoc,
   setDoc,
   updateDoc,
+  where,
+  query,
 } from "firebase/firestore";
 
 // Get
@@ -64,4 +66,16 @@ export async function editDocument(path, data, docId) {
 export async function deleteDocument(path, docId) {
   const document = doc(firestoreDB, path, docId);
   await deleteDoc(document);
+}
+
+// Find titles by type
+export async function findTitlesByType(type) {
+  const titlesCollection = collection(firestoreDB, "titles");
+  const searchTerm = where("type", "==", type);
+  const titlesQuery = query(titlesCollection, searchTerm);
+  const querySnapshot = await getDocs(titlesQuery);
+  const specificTitles = querySnapshot.docs.map((doc) => {
+    return { id: doc.id, ...doc.data() };
+  });
+  return specificTitles;
 }

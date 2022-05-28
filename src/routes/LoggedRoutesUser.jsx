@@ -6,6 +6,7 @@ export default function LoggedRoutesUser() {
   return (
     <Routes>
       <Route path="/browse" element={<UserDashboard />} />
+      <Route path="*" element={<UserDashboard />} />
       <Route path="/watch/:videoId" element={<VideoPage />} />
     </Routes>
   );
