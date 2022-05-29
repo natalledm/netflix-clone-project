@@ -1,12 +1,11 @@
-import InputField from "../components/InputField";
-import "../styles/components/create-title.css";
-import form from "../data/title-structure.json";
+import InputField from "./InputField";
 import { useState, useEffect } from "react";
 import { addDocument, getCollection } from "../scripts/fireStoreDB";
+import stringToArray from "../scripts/stringToArray";
+import form from "../data/title-structure.json";
+import "../styles/components/create-title.css";
 
 export default function CreateTitle() {
-  const [isRefreshNedded, setIsRefreshNeeded] = useState(false);
-
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
   const [keywords, setKeywords] = useState("");
@@ -51,12 +50,10 @@ export default function CreateTitle() {
       const titlesIds = titlesDB.map((title) => {
         return title.id;
       });
-
       setTitles(titlesIds);
-      setIsRefreshNeeded(false);
     }
     loadData("titles");
-  }, [isRefreshNedded]);
+  }, []);
 
   async function onSubmit(event) {
     event.preventDefault();
@@ -80,10 +77,12 @@ export default function CreateTitle() {
       return;
     }
 
+    const keywordsArray = stringToArray(keywords);
+
     const newTitle = {
       name: name,
       description: description,
-      keywords: keywords,
+      keywords: keywordsArray,
       videoId: videoId,
       thumbnail: thumbnail,
       backgroundImage: backgroundImage,
@@ -95,12 +94,9 @@ export default function CreateTitle() {
 
     try {
       await addDocument("titles", newTitle);
-      console.log(newTitle);
       setIsSuccessful(true);
-      setIsRefreshNeeded(true);
     } catch (error) {
       console.log("The error was:", error);
-      setIsSuccessful(false);
     }
     resetForm();
   }
