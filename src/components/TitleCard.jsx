@@ -4,24 +4,20 @@ import TitleInfoLine from "./TitleInfoLine";
 import PlayButton from "./PlayButton";
 import Modal from "./Modal";
 import infoArrow from "../assets/icons/arrow-down-info.png";
-import plusIcon from "../assets/icons/plus.png";
 import like from "../assets/icons/like.png";
 import "../styles/components/title-card.css";
+import AddToListButton from "./AddToListButton";
 
 export default function TitleCard({ title }) {
   const [showModal, setShowModal] = useState(false);
-  const [titleId, setTitleId] = useState("");
 
   if (title === undefined) {
     return null;
   }
 
-  const { thumbnail, keywords, id, videoId } = title;
+  const { thumbnail, keywords, videoId } = title;
+
   const toggleModal = () => setShowModal(!showModal);
-  function titleToList() {
-    setTitleId(id);
-    console.log(titleId);
-  }
 
   return (
     <div className="title-card">
@@ -30,9 +26,7 @@ export default function TitleCard({ title }) {
         <div className="buttons-container">
           <span>
             <PlayButton videoId={videoId} iconOnly />
-            <button className="button-circle" onClick={titleToList}>
-              <img src={plusIcon} alt="add to my list" className="icon-size" />
-            </button>
+            <AddToListButton title={title} />
             <button className="button-circle">
               <img src={like} alt="like title" className="icon-size" />
             </button>
@@ -61,11 +55,7 @@ export default function TitleCard({ title }) {
       </div>
       <Modal>
         {showModal && (
-          <TitleCardModal
-            toggleModal={toggleModal}
-            title={title}
-            titleToList={titleToList}
-          />
+          <TitleCardModal toggleModal={toggleModal} title={title} />
         )}
       </Modal>
     </div>

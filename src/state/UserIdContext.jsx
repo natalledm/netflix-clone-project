@@ -1,6 +1,6 @@
 // packages
 import { createContext, useState, useContext, useEffect } from "react";
-import { getDocument } from "../scripts/fireStoreDB";
+import { editDocument, getDocument } from "../scripts/fireStoreDB";
 import {
   setLocalStorageUser,
   getLocalStorageUser,
@@ -52,7 +52,27 @@ export function UserIdContext({ children }) {
     loadUserData("users", userId);
   }, [userId]);
 
-  const value = { userId, login, logout, userInfo };
+  async function addTitleToMyList(title) {
+    let userListDB = userInfo.userList;
+    if (userListDB === undefined) {
+      userListDB = [title.id];
+    } else {
+      userListDB.push(title.id);
+    }
+
+    const newUserInfo = { ...userInfo, userList: userListDB };
+
+    await editDocument("users", newUserInfo, userId);
+    setUserInfo(newUserInfo);
+  }
+
+  const value = {
+    userId,
+    userInfo,
+    login,
+    logout,
+    addTitleToMyList,
+  };
 
   return <Context.Provider value={value}>{children}</Context.Provider>;
 }

@@ -1,10 +1,10 @@
 import close from "../assets/icons/close.png";
-import plusIcon from "../assets/icons/plus.png";
 import like from "../assets/icons/like.png";
 import "../styles/components/modal-header.css";
 import PlayButton from "./PlayButton";
+import AddToListButton from "./AddToListButton";
 
-export default function ModalHeader({ toggleModal, title, titleToList }) {
+export default function ModalHeader({ toggleModal, title }) {
   const { name, backgroundImage, videoId } = title;
 
   return (
@@ -17,13 +17,7 @@ export default function ModalHeader({ toggleModal, title, titleToList }) {
         <h1 className="modal-play-title">{name}</h1>
         <div className="modal-play-buttons">
           <PlayButton videoId={videoId} />
-          <button className="button-circle-modal" onClick={titleToList}>
-            <img
-              src={plusIcon}
-              alt="add to my list"
-              className="icon-size-modal"
-            />
-          </button>
+          <AddToListButton title={title} />
           <button className="button-circle-modal">
             <img src={like} alt="like title" className="icon-size-modal" />
           </button>
