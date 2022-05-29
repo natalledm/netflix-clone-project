@@ -1,0 +1,21 @@
+.icon-size {
+  width: 18px;
+  height: 18px;
+  text-align: center;
+}
+
+.button-circle {
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  background-color: rgba(42, 42, 42, 0.6);
+  padding: 0.5rem;
+  margin: 0.2rem;
+  text-align: center;
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+}
+
+.button-circle:hover {
+  background-color: var(--black);
+}

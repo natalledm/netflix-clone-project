@@ -5,7 +5,7 @@ import ModalInfoSection from "./ModalInfoSection";
 import SerieSeasons from "./SerieSeasons";
 import "../styles/components/title-card-modal.css";
 
-export default function TitleCardModal({ toggleModal, title, titleToList }) {
+export default function TitleCardModal({ toggleModal, title }) {
   const [openYoutube, setOpenYoutube] = useState(false);
 
   const toggleYoutube = () => setOpenYoutube(!openYoutube);
@@ -19,7 +19,6 @@ export default function TitleCardModal({ toggleModal, title, titleToList }) {
           <ModalHeader
             title={title}
             toggleModal={toggleModal}
-            titleToList={titleToList}
             toggleYoutube={toggleYoutube}
           />
 

@@ -5,7 +5,7 @@ import RowCategoryTitles from "./RowCategoryTitles";
 import "../styles/components/main-content.css";
 
 export default function MainContent() {
-  const user = useUserId();
+  const { userInfo } = useUserId();
 
   const [titles, setTitles] = useState([]);
 
@@ -33,15 +33,14 @@ export default function MainContent() {
   }, [titles]);
 
   useEffect(() => {
-    const userList = user.userInfo.userList;
+    const userList = userInfo.userList;
     if (userList === undefined) return;
 
     const userFilteredList = titles.filter((title) =>
       userList.includes(title.id),
     );
-
     setMyList(userFilteredList);
-  }, [titles, user]);
+  }, [titles, userInfo]);
 
   return (
     <div className="main-container">
