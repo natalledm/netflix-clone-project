@@ -6,7 +6,13 @@ The **data is created dynamically** through an admin page connected to the fires
 
 It is a desktop first page following the netflix web format, so please open it on a desktop browser.
 
-You can visit the page [here](https://google.com/tbd) to see the working site. I did more steps of organization, including a Figma design, but I will write a shorter Readme. If you are curious to see or want to talk about it, let me know! :)
+You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working site. I did more steps of organization, including a Figma design, but I will write a shorter Readme. If you are curious to see or want to talk about it, let me know! :)
+
+If you don't want to create an Account (or can't, if Firebase gives a 404), here is an account:
+
+`email: user@netflix.com`
+
+`password: 12345678`
 
 ## Tech stack
 
