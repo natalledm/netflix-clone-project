@@ -1,7 +1,7 @@
 import InputField from "./InputField";
 import { useState, useEffect } from "react";
 import { addDocument, getCollection } from "../scripts/fireStoreDB";
-import stringToArray from "../scripts/stringToArray";
+import { stringToArray } from "../scripts/stringToArray";
 import form from "../data/title-structure.json";
 import "../styles/components/create-title.css";
 
@@ -159,6 +159,9 @@ export default function CreateTitle() {
           {chooseTypeFields()}
           <button className="create-title-button">Submit</button>
         </form>
+        {isSuccessful ? (
+          <h1 className="title-created">Title created!</h1>
+        ) : null}
       </div>
     </div>
   );

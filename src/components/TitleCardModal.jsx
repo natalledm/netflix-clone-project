@@ -10,8 +10,6 @@ export default function TitleCardModal({ toggleModal, title, titleToList }) {
 
   const toggleYoutube = () => setOpenYoutube(!openYoutube);
 
-  console.log(openYoutube);
-
   return (
     <div>
       <div className="background-layover" onClick={toggleModal}></div>
