@@ -1,11 +1,19 @@
 import { useState, useEffect } from "react";
-import { findTitlesByType, getCollection } from "../scripts/fireStoreDB";
+import {
+  deleteDocument,
+  findTitlesByType,
+  getCollection,
+} from "../scripts/fireStoreDB";
+import { Link } from "react-router-dom";
+import trash from "../assets/icons/delete.png";
+import edit from "../assets/icons/edit.png";
 import "../styles/components/get-titles.css";
 
 export default function GetTitles() {
   const [titleType, setTitleType] = useState("");
   const [titles, setTitles] = useState([]);
   const [filteredTitles, setFilteredTitles] = useState([]);
+  const [isRefreshNeeded, setIsRefreshNeeded] = useState(false);
 
   // get entire collection
   useEffect(() => {
@@ -17,9 +25,10 @@ export default function GetTitles() {
       });
 
       setTitles(titlesIds);
+      setIsRefreshNeeded(false);
     }
     loadData("titles");
-  }, []);
+  }, [isRefreshNeeded]);
 
   // get specific titles
   useEffect(() => {
@@ -31,11 +40,34 @@ export default function GetTitles() {
     findTitles(titleType);
   }, [titleType, titles]);
 
+  function getClickedValueAndDelete(title) {
+    if (window.confirm(`Do you really want to delete ${title.name}?`)) {
+      deleteDocument("titles", title.id);
+      alert(`${title.name} ${title.type} deleted`);
+      setIsRefreshNeeded(true);
+    } else {
+      console.log("not deleted");
+    }
+  }
+
   function showFilteredTitles() {
     const titlesByType = filteredTitles.map((title) => (
       <li key={title.id} className="title-card-list-item">
         <img src={title.thumbnail} alt="" className="title-thumbnail" />
         {title.name}
+        <div className="buttons-title">
+          <button
+            onClick={() => getClickedValueAndDelete(title)}
+            className="delete-button"
+          >
+            <img src={trash} alt="" />
+          </button>
+          <button>
+            <Link to={"/admin/edit/" + title.id} className="edit-link">
+              <img src={edit} alt="" />
+            </Link>
+          </button>
+        </div>
       </li>
     ));
 

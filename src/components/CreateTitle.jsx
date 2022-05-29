@@ -159,6 +159,9 @@ export default function CreateTitle() {
           {chooseTypeFields()}
           <button className="create-title-button">Submit</button>
         </form>
+        {isSuccessful ? (
+          <h1 className="title-created">Title created!</h1>
+        ) : null}
       </div>
     </div>
   );

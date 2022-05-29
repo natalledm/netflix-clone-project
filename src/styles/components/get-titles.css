@@ -29,10 +29,20 @@
   gap: 1rem;
   border-radius: 0 0 4px 4px;
   text-align: center;
+  font-family: var(--n-bold-font);
+  font-size: 18px;
 }
 
 .title-thumbnail {
   width: 230px;
   height: 130px;
   border-radius: 4px;
+}
+
+.buttons-title button {
+  background-color: var(--black);
+  border: 2px solid var(--white);
+  padding: 0.5rem;
+  border-radius: 4px;
+  margin: 1rem;
 }
