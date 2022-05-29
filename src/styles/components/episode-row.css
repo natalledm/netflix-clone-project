@@ -1,0 +1,25 @@
+.episode-row {
+  display: flex;
+  margin: 2rem 0;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid #404040;
+  border-radius: 4px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.episode-row:hover {
+  text-decoration: none;
+}
+
+.epi-img {
+  border-radius: 4px;
+  width: 200px;
+  height: 100px;
+}
+
+.epi-name {
+  margin: 1rem 0;
+  font-weight: bold;
+}
