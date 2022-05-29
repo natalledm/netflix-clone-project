@@ -22,9 +22,15 @@
   transform: translate(-50%);
   overflow-y: auto;
   overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   background-color: var(--black);
+}
+
+.modal-layer::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-content {

@@ -2,8 +2,8 @@ import { useState } from "react";
 import YoutubeVideo from "./YoutubeVideo";
 import ModalHeader from "./ModalHeader";
 import ModalInfoSection from "./ModalInfoSection";
+import SerieSeasons from "./SerieSeasons";
 import "../styles/components/title-card-modal.css";
-import "../styles/components/modal-info-section.css";
 
 export default function TitleCardModal({ toggleModal, title, titleToList }) {
   const [openYoutube, setOpenYoutube] = useState(false);
@@ -26,6 +26,11 @@ export default function TitleCardModal({ toggleModal, title, titleToList }) {
           <div className="modal-content-info">
             <ModalInfoSection title={title} />
           </div>
+          {title.type === "serie" ? (
+            <div className="modal-content-info">
+              <SerieSeasons title={title} />
+            </div>
+          ) : null}
         </div>
       </div>
     </div>
