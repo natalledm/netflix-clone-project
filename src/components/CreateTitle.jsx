@@ -1,7 +1,7 @@
 import InputField from "./InputField";
 import { useState, useEffect } from "react";
 import { addDocument, getCollection } from "../scripts/fireStoreDB";
-import stringToArray from "../scripts/stringToArray";
+import { stringToArray } from "../scripts/stringToArray";
 import form from "../data/title-structure.json";
 import "../styles/components/create-title.css";
 
