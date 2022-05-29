@@ -1,4 +1,5 @@
 import "../styles/components/modal-info-section.css";
+import SerieSeasons from "./SerieSeasons";
 import TitleInfoLine from "./TitleInfoLine";
 
 export default function ModalInfoSection({ title }) {
@@ -26,6 +27,9 @@ export default function ModalInfoSection({ title }) {
             This {title.type} is:
           </strong>
           {genres}
+        </section>
+        <section>
+          <SerieSeasons title={title} />
         </section>
       </div>
     </div>
