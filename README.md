@@ -8,6 +8,8 @@ It is a desktop first page following the netflix web format, so please open it o
 
 You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working website.
 
+## Scroll down to see all the app prints! :)
+
 ## Tech stack
 
 1. React
@@ -47,3 +49,9 @@ In development mode:
 ![Amin Dashboard](./src/assets/prints/admin-site/admin-page.png)
 ![Admin with select title](./src/assets/prints/admin-site/admin-page-type.png)
 ![Admin edit](./src/assets/prints/admin-site/admin-edit.png)
+
+### Logged off
+
+![Sign In](./src/assets/prints/outside-dashboard/sign-in.png)
+![Sign up](./src/assets/prints/outside-dashboard/sign-up.png)
+![Recover](./src/assets/prints/outside-dashboard/recover-pass.png)
