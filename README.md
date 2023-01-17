@@ -37,13 +37,13 @@ In development mode:
 
 ### Main website - User
 
-[Homepage]()
-[Homepage Continuation]()
-[Homepage Modal]()
-[Homepage Play]()
+![Homepage](./src/assets/prints/main-site/homepage.png)
+![Homepage Continuation](./src/assets/prints/main-site/homepage2.png)
+![Homepage Modal](./src/assets/prints/main-site/big-modal.png)
+![Homepage Play](./src/assets/prints/main-site/watch-screen.png)
 
 ### Admin page
 
-[Amin Dashboard]()
-[Admin with select title]()
-[Admin edit]()
+![Amin Dashboard](./src/assets/prints/admin-site/admin-page.png)
+![Admin with select title](./src/assets/prints/admin-site/admin-page-type.png)
+![Admin edit](./src/assets/prints/admin-site/admin-edit.png)
