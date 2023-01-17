@@ -11,9 +11,9 @@ export default function Login() {
   // global state
   const { login } = useUserId();
 
-  // local state
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // local state - pre-filled user account
+  const [email, setEmail] = useState("user@netflix.com");
+  const [password, setPassword] = useState("12345678");
   const navigation = useNavigate();
 
   async function onSubmit(event) {

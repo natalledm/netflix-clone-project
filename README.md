@@ -2,17 +2,21 @@
 
 This is Nättflix website, where you can sign up to watch series and movies to <sub><sup>~~fall asleep to~~</sup></sub> enjoy!
 
-The **data is created dynamically** through an admin page connected to the firestore database. If you want to test it, ask me for a teachers account!
+The **data is created dynamically** through an admin page connected to the Firestore Database. If you want to test it, ask me for the admin account. Prints of the functionalities are below!
 
 It is a desktop first page following the netflix web format, so please open it on a desktop browser.
 
-You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working site. I did more steps of organization, including a Figma design, but I will write a shorter Readme. If you are curious to see or want to talk about it, let me know! :)
+You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working website.
 
-If you don't want to create an Account (or can't, if Firebase gives a 404), here is an account:
+---
 
-`email: user@netflix.com`
+## Scroll down to see all the app prints! :)
 
-`password: 12345678`
+Also, Chrome flagged the app because I use the same name and structure of Netflix, but the login/recover system used is Google Authentication, so I don't have access to any passwords!
+
+If you see the red screen, please visit the app anyway! It is meant to be just a copy for teaching purposes. :)
+
+---
 
 ## Tech stack
 
@@ -38,3 +42,24 @@ In development mode:
 2. Type `npm install` to install the project dependencies.
 
 3. start the application with `npm start`, it will open a `localhost:3000` page automatically in your default browser.
+
+## Prints
+
+### Main website - User
+
+![Homepage](./src/assets/prints/main-site/homepage.png)
+![Homepage Continuation](./src/assets/prints/main-site/homepage2.png)
+![Homepage Modal](./src/assets/prints/main-site/big-modal.png)
+![Homepage Play](./src/assets/prints/main-site/watch-screen.png)
+
+### Admin page
+
+![Amin Dashboard](./src/assets/prints/admin-site/admin-page.png)
+![Admin with select title](./src/assets/prints/admin-site/admin-page-type.png)
+![Admin edit](./src/assets/prints/admin-site/admin-edit.png)
+
+### Logged off
+
+![Sign In](./src/assets/prints/outside-dashboard/sign-in.png)
+![Sign up](./src/assets/prints/outside-dashboard/sign-up.png)
+![Recover](./src/assets/prints/outside-dashboard/recover-pass.png)
