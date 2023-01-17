@@ -2,17 +2,11 @@
 
 This is Nättflix website, where you can sign up to watch series and movies to <sub><sup>~~fall asleep to~~</sup></sub> enjoy!
 
-The **data is created dynamically** through an admin page connected to the firestore database. If you want to test it, ask me for a teachers account!
+The **data is created dynamically** through an admin page connected to the Firestore Database. If you want to test it, ask me for the admin account. Prints of the functionalities are below!
 
 It is a desktop first page following the netflix web format, so please open it on a desktop browser.
 
-You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working site. I did more steps of organization, including a Figma design, but I will write a shorter Readme. If you are curious to see or want to talk about it, let me know! :)
-
-If you don't want to create an Account (or can't, if Firebase gives a 404), here is an account:
-
-`email: user@netflix.com`
-
-`password: 12345678`
+You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working website.
 
 ## Tech stack
 
@@ -38,3 +32,18 @@ In development mode:
 2. Type `npm install` to install the project dependencies.
 
 3. start the application with `npm start`, it will open a `localhost:3000` page automatically in your default browser.
+
+## Prints
+
+### Main website - User
+
+[Homepage]()
+[Homepage Continuation]()
+[Homepage Modal]()
+[Homepage Play]()
+
+### Admin page
+
+[Amin Dashboard]()
+[Admin with select title]()
+[Admin edit]()
