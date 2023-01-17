@@ -8,7 +8,15 @@ It is a desktop first page following the netflix web format, so please open it o
 
 You can visit the page [here](https://netflix-clone-project-825bf.web.app/) to see the working website.
 
+---
+
 ## Scroll down to see all the app prints! :)
+
+Also, Chrome flagged the app because I use the same name and structure of Netflix, but the login/recover system used is Google Authentication, so I don't have access to any passwords!
+
+If you see the red screen, please visit the app anyway! It is meant to be just a copy for teaching purposes. :)
+
+---
 
 ## Tech stack
 
